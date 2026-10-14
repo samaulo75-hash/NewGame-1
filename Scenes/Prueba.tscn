@@ -1,25 +1,35 @@
 [gd_scene format=3 uid="uid://b46o0885a11bp"]
 
 [ext_resource type="Texture2D" uid="uid://4ycl0cu2h6ee" path="res://icon.svg" id="1_bj1il"]
+[ext_resource type="Texture2D" uid="uid://cnubwebq8my2o" path="res://Assets/Rocky Roads/Backgrounds/desert_a.png" id="1_ckhxu"]
 [ext_resource type="Script" uid="uid://bfkmhwcx3l4ew" path="res://Script/character_body_2d.gd" id="2_8qtaw"]
+[ext_resource type="Texture2D" uid="uid://dsprrc7xodccp" path="res://Assets/Rocky Roads/UI/go.png" id="4_1ugay"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqkac"]
 size = Vector2(417, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bulm4"]
-size = Vector2(125, 130.5)
+size = Vector2(135.00002, 112.00003)
 
 [node name="Node2D" type="Node2D" unique_id=351916096]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1105321771]
+position = Vector2(431, -157)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=1388872702]
+position = Vector2(67, 661)
+scale = Vector2(17.64746, 20.226564)
+texture = ExtResource("1_ckhxu")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1496045483]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=801778026]
-position = Vector2(555, 648)
+position = Vector2(552.5, 558)
 scale = Vector2(8.3671875, 1.3125)
 texture = ExtResource("1_bj1il")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1222813442]
-position = Vector2(556.278, 644.23883)
+position = Vector2(553.778, 554.23883)
 scale = Vector2(2.5560858, 2.5074627)
 shape = SubResource("RectangleShape2D_eqkac")
 
@@ -27,9 +37,13 @@ shape = SubResource("RectangleShape2D_eqkac")
 script = ExtResource("2_8qtaw")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1095534240]
-position = Vector2(618, 409)
-texture = ExtResource("1_bj1il")
+position = Vector2(571.25, 330)
+scale = Vector2(3.70625, 6.5)
+texture = ExtResource("4_1ugay")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1523203505]
-position = Vector2(618.5, 411.25)
+position = Vector2(571.5, 329)
 shape = SubResource("RectangleShape2D_bulm4")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=950423836]
+position = Vector2(574.24994, 323.99997)
