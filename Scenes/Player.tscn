@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://nay5wrdkksep"]
+
+[ext_resource type="Script" uid="uid://bfkmhwcx3l4ew" path="res://Script/character_body_2d.gd" id="1_kyqiw"]
+[ext_resource type="Texture2D" uid="uid://dsprrc7xodccp" path="res://Assets/Rocky Roads/UI/go.png" id="2_gntrk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dewec"]
+size = Vector2(31.000004, 18.000008)
+
+[node name="Player" type="CharacterBody2D" unique_id=1862075782]
+script = ExtResource("1_kyqiw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=599940766]
+position = Vector2(571.25, 330)
+texture = ExtResource("2_gntrk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1648327806]
+position = Vector2(570.5, 329)
+shape = SubResource("RectangleShape2D_dewec")
